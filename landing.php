@@ -1,7 +1,8 @@
 <?php
 
-    session_start()
+    session_start();
 
+    var_dump ($_SESSION['get']);
 ?>
 
 <!DOCTYPE html>

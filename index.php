@@ -55,6 +55,45 @@
 
                 </div>
 
+                <div>
+                    Vuoi utilizzare caratteri ripetuti?
+
+                    <div>
+
+                        <label for="radio-repeat-yes">yes</label>
+                        <input type="radio" name="repeat" value="true" checked id="radio-repeat-yes">
+
+                    </div>
+             
+                    <div>
+
+                        <label for="radio-repeat-no">no</label>
+                        <input type="radio" name="repeat" value="false" id="radio-repeat-no">
+
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="checkbox-lowc-letters">Minuscole</label>
+                    <input type="checkbox" id="checkbox-lowc-letters" name="lowercase">
+                </div>
+
+                <div>
+                    <label for="checkbox-uppc-letters">Maiuscole</label>
+                    <input type="checkbox" id="checkbox-uppc-letters" name="uppercase">
+                </div>
+
+                <div>
+                    <label for="checkbox-numbers">Numeri</label>
+                    <input type="checkbox" id="checkbox-numbers" name="numbers">
+                </div>
+
+                <div>
+                    <label for="checkbox-special-char">Caratteri Speciali</label>
+                    <input type="checkbox" id="checkbox-special-char" name="symbols">
+                </div>
+
             </div>
 
 

@@ -3,7 +3,9 @@
     require __DIR__.'./functions.php';
 
     session_start();
-    
+
+    $_SESSION['get']=$_GET;
+
     $passwordLength = $_GET['length'];
 
     if($passwordLength <= 0){
@@ -14,7 +16,8 @@
 
     else{
     
-        $returnedPassword=generatePassword($passwordLength);
+        // $returnedPassword=generatePassword($passwordLength);
+        $returnedPassword=generatePassword($_GET);
     
         $_SESSION['password'] = $returnedPassword;
     
