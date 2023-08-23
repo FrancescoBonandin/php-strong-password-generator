@@ -2,26 +2,28 @@
  
     $passwordLength = $_GET['length'] ?? 0;
 
-        function  generatePassword ($pwLength){
+    // function  generatePassword ($pwLength){
 
-            $pwString = '';
+    //     $pwString = '';
 
-            $charactersString='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#!$%&/()=?*[]{}.,;:';
-            
-            $charactersArray=str_split($charactersString);
+    //     $charactersString='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#!$%&/()=?*[]{}.,;:';
+        
+    //     $charactersArray=str_split($charactersString);
 
 
-            for($index=0;$index<$pwLength;$index++){
+    //     for($index=0;$index<$pwLength;$index++){
 
-                $randomNumber = random_int(0,count($charactersArray)-1);
+    //         $randomNumber = random_int(0,count($charactersArray)-1);
 
-                $pwString .= $charactersArray[$randomNumber];
+    //         $pwString .= $charactersArray[$randomNumber];
 
-            };
+    //     };
 
-            return $pwString;
-            
-        };
+    //     return $pwString;
+        
+    // };
+
+    require __DIR__.'./functions.php'
 
 ?>
 
