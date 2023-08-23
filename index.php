@@ -55,10 +55,14 @@
 
                 </div>
 
+                    <br>
+
                 <div>
                     Vuoi utilizzare caratteri ripetuti?
 
+                    
                     <div>
+                        <br>
 
                         <label for="radio-repeat-yes">yes</label>
                         <input type="radio" name="repeat" value="true" checked id="radio-repeat-yes">
@@ -73,6 +77,16 @@
                     </div>
 
                 </div>
+
+
+                <br>
+
+
+                <div>
+                    includi nella generazione:
+                </div>
+
+                <br>
 
                 <div>
                     <label for="checkbox-lowc-letters">Minuscole</label>
@@ -96,6 +110,7 @@
 
             </div>
 
+            <br>
 
             <button type="submit">
                 genera
