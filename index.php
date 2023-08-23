@@ -1,6 +1,6 @@
 <?php
+    
  
-    $passwordLength = $_GET['length'] ?? 0;
 
     // function  generatePassword ($pwLength){
 
@@ -23,7 +23,6 @@
         
     // };
 
-    require __DIR__.'./functions.php'
 
 ?>
 
@@ -38,7 +37,7 @@
 
     <body>
 
-        <form action="" method="get">
+        <form action="./midway.php" method="get">
 
             <h2>
                 PHP Strong Password Generator
@@ -52,7 +51,7 @@
 
                 <div>
                     
-                    <input type="number" name="length" id="pwd-length-input" value='<?php echo $passwordLength; ?>' min='1'>
+                    <input type="number" name="length" id="pwd-length-input" value='1' min='1'>
 
                 </div>
 
@@ -65,13 +64,6 @@
 
         </form>
 
-        <div>
-
-            <?php
-                echo generatePassword($passwordLength);
-            ?>
-
-        </div>
 
     </body>
 
