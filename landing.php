@@ -2,7 +2,6 @@
 
     session_start();
 
-    var_dump ($_SESSION['get']);
 ?>
 
 <!DOCTYPE html>
@@ -30,5 +29,13 @@
         </div>
 
     </body>
+
+    <?php
+
+        session_unset();
+
+        session_destroy();
+
+    ?>
 
 </html>
