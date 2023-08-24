@@ -51,7 +51,7 @@
 
                 $index=0;
 
-                while( $index < ($repeat===true ? $queryKeys['length'] : count($charactersArray))){
+                while( $index < ($repeat===true ? intval($queryKeys['length']) : count($charactersArray))){
     
                     $randomNumber = random_int(0,count($charactersArray)-1);
                   
