@@ -52,16 +52,19 @@
                     
                     <?php
 
-                        if($_SESSION['noparam']==true) {
+                        if(isset($_SESSION['noparam'])){
 
-                            echo "<div class='alert'";
+                            if($_SESSION['noparam']==true) {
+    
+                                echo "<div class='alert'";
+    
+                                    echo '<em>None of the options, has been selected.
+                                    Please, chose at least 1 option </em>';
+                                
+                                echo "</div>";
+                            }
 
-                                echo '<em>None of the options, has been selected.
-                                Please, chose at least 1 option </em>';
-                            
-                            echo "</div>";
                         }
-
 
                     ?>
 
