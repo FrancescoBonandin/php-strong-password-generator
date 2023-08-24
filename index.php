@@ -58,8 +58,7 @@
     
                                 echo "<div class='alert'";
     
-                                    echo '<em>None of the options, has been selected.
-                                    Please, chose at least 1 option </em>';
+                                    echo $_SESSION['noparamtext'];
                                 
                                 echo "</div>";
                             }
