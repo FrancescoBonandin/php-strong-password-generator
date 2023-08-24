@@ -8,10 +8,19 @@
 
     $passwordLength = $_GET['length'];
 
-    if($passwordLength <= 0){
+    $noQueryParam=false ;
 
-        echo 'qualcosa è andato storto oppure hai messo un valore non valido, riprova per favore';
+    if($passwordLength <= 0 || (
+        !isset($_GET['numbers']) &
+        !isset($_GET['lowercase']) &
+        !isset($_GET['uppercase'])&
+        !isset($_GET['symbols']))){
 
+        $noQueryParam=true;
+
+        $_SESSION['noparam']=$noQueryParam ;
+        
+        header('Location: ./index.php');
     }
 
     else{

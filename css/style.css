@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::first-letter{
+    text-transform: capitalize;
+    
+}
+
+.container{
+
+    margin: 0 auto;
+    width: 1200px;
+}
+
+h1 {
+    text-align:center;
+
+    margin-bottom: 2rem;
+}
+
+div{
+    margin-bottom: 1rem;
+}
+
+form > div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.alert {
+    background-color: lightblue;
+    border: 1px solid lightsteelblue;
+    color: darkblue;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+}
+
+.input-box{
+    text-align: right;
+}

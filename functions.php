@@ -51,9 +51,8 @@
 
                 $index=0;
 
-                while( $index < $queryKeys['length']){
+                while( $index < ($repeat===true ? $queryKeys['length'] : count($charactersArray))){
     
-                    
                     $randomNumber = random_int(0,count($charactersArray)-1);
                   
                     if($repeat){
@@ -73,14 +72,10 @@
                         }
 
                     }
+                }
     
-                };
 
 
-        }
-
-        else{
-            $pwString = '<em>None of the options, has been selected please chose an option next time</em>';
         }
 
         return $pwString;

@@ -1,5 +1,5 @@
 <?php
-    
+    session_start()
  
 
     // function  generatePassword ($pwLength){
@@ -33,90 +33,103 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PHP Strong Password Generator</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
 
-        <form action="./midway.php" method="get">
+        <div class="container">
 
-            <h2>
-                PHP Strong Password Generator
-            </h2>
 
-            <div>
+            <form action="./midway.php" method="get">
+    
                 
-                <label for="pwd-length-input">
-                    Inserisci la lunghezza della password da generare:
-                </label>
-
                 <div>
+
+                    <h1>
+                        PHP Strong Password Generator
+                    </h1>
                     
-                    <input type="number" name="length" id="pwd-length-input" value='1' min='1'>
+                    <?php
 
-                </div>
+                        if($_SESSION['noparam']==true) {
 
-                    <br>
+                            echo "<div class='alert'";
 
-                <div>
-                    Vuoi utilizzare caratteri ripetuti?
+                                echo '<em>None of the options, has been selected.
+                                Please, chose at least 1 option </em>';
+                            
+                            echo "</div>";
+                        }
 
-                    
-                    <div>
-                        <br>
 
-                        <label for="radio-repeat-yes">yes</label>
-                        <input type="radio" name="repeat" value="true" checked id="radio-repeat-yes">
+                    ?>
 
+                    <label for="pwd-length-input">
+                        Inserisci la lunghezza della password da generare:
+                    </label>
+    
+                    <div class="input-box">
+                        
+                        <input type="number" name="length" id="pwd-length-input" value='1' min='1'>
+    
                     </div>
-             
+    
+    
                     <div>
-
-                        <label for="radio-repeat-no">no</label>
-                        <input type="radio" name="repeat" value="false" id="radio-repeat-no">
-
+                        Vuoi utilizzare caratteri ripetuti?
+    
+                        
+                        <div class="input-box">
+    
+                            <label for="radio-repeat-yes">yes</label>
+                            <input type="radio" name="repeat" value="true" checked id="radio-repeat-yes">
+    
+                        </div>
+                 
+                        <div class="input-box">
+    
+                            <label for="radio-repeat-no">no</label>
+                            <input type="radio" name="repeat" value="false" id="radio-repeat-no">
+    
+                        </div>
+    
+                    </div>    
+    
+                    <div>
+                        includi nella generazione:
                     </div>
+        
+                    <div class="input-box">
+                        <label for="checkbox-lowc-letters">Minuscole</label>
+                        <input type="checkbox" id="checkbox-lowc-letters" name="lowercase">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="checkbox-uppc-letters">Maiuscole</label>
+                        <input type="checkbox" id="checkbox-uppc-letters" name="uppercase">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="checkbox-numbers">Numeri</label>
+                        <input type="checkbox" id="checkbox-numbers" name="numbers">
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="checkbox-special-char">Caratteri Speciali</label>
+                        <input type="checkbox" id="checkbox-special-char" name="symbols">
+                    </div>
+    
+                    <button type="submit">
+                        genera
+                    </button>
 
                 </div>
+        
+    
+            </form>
 
-
-                <br>
-
-
-                <div>
-                    includi nella generazione:
-                </div>
-
-                <br>
-
-                <div>
-                    <label for="checkbox-lowc-letters">Minuscole</label>
-                    <input type="checkbox" id="checkbox-lowc-letters" name="lowercase">
-                </div>
-
-                <div>
-                    <label for="checkbox-uppc-letters">Maiuscole</label>
-                    <input type="checkbox" id="checkbox-uppc-letters" name="uppercase">
-                </div>
-
-                <div>
-                    <label for="checkbox-numbers">Numeri</label>
-                    <input type="checkbox" id="checkbox-numbers" name="numbers">
-                </div>
-
-                <div>
-                    <label for="checkbox-special-char">Caratteri Speciali</label>
-                    <input type="checkbox" id="checkbox-special-char" name="symbols">
-                </div>
-
-            </div>
-
-            <br>
-
-            <button type="submit">
-                genera
-            </button>
-
-        </form>
+        </div>
 
 
     </body>
